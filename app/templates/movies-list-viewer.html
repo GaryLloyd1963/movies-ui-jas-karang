@@ -1,0 +1,46 @@
+<div ng-controller="MoviesListController as vm">
+    <div id="movies-list-page">
+        <div id="movies-list-header" class="movies-list-header">
+            <p>Movies List</p>
+        </div>
+        <div id="movies-list" class="movies-list">
+            <table class="table table-striped table-hover">
+            <thead>
+                <tr>
+                    <th ng-repeat="header in vm.headings"><a href="#" ng-click="vm.switchHeaderSort($index)" >{{header.title}} </a>
+                        <span class="glyphicon glyphicon-triangle-top" aria-hidden="true" ng-show="vm.isSortAscending($index)"></span>
+                        <span class="glyphicon glyphicon-triangle-bottom" aria-hidden="true" ng-show="vm.isSortDescending($index)"></span>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="movie in vm.moviesListData.moviesList">
+                    <td>{{ movie.id }}</td>
+                    <td>{{ movie.movietitle }}</td>
+                    <td>{{ movie.director }}</td>
+                    <td>{{ movie.category }}</td>
+                    <td>{{ movie.rank }}</td>
+                    <td>{{ movie.value }}</td>
+                    <td>{{ movie.year }}</td>
+                    <td>{{ movie.company }}</td>
+                </tr>
+            </tbody>
+            </table>
+        </div>
+        <div id="movies-list-paging" class="movies-list-paging">
+            <div id="movies-list-page-control" class="btn-group">
+                <button type="button" class="btn btn-default"
+                                ng-disabled="vm.currentPage === 0" ng-click="vm.changePage(-1);">
+                    <span class="glyphicon glyphicon-triangle-left" aria-hidden="true"></span>
+                </button>
+                <button type="button" class="btn btn-default">
+                    {{vm.currentPage + 1}}
+                </button>
+                <button type="button" class="btn btn-default"
+                        ng-disabled="vm.currentPage >= (vm.pageCount - 1)"  ng-click="vm.changePage(1);">
+                    <span class="glyphicon glyphicon-triangle-right" aria-hidden="true"></span>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>

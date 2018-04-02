@@ -1,0 +1,35 @@
+
+.movies-page-header {
+    width: 100%;
+    height: 80px;
+    background-color: black;
+    color: white;
+    font-size: 40px;
+}
+
+.movies-page-header-logo {
+    float:left;
+    width:80px;
+    height:80px;    
+}
+
+.movies-page-header-text {
+    padding-top: 27px; 
+}
+
+.movies-list-header {
+    margin-left: 10%;
+    margin-right: 10%;
+    padding-top: 10px;
+    font-size: 20px;     
+}
+
+.movies-list {
+    margin-left: 10%;
+    margin-right: 10%;   
+}
+
+.movies-list-paging {
+    margin-left: 10%;
+    margin-right: 10%;   
+}

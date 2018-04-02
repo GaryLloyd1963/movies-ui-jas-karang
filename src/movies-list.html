@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+
+    <title>Movies List</title>
+
+    <link rel="icon" href="garfy70.ico">
+</head>
+<body ng-app="movies">
+    <ng-include src="'../app/movies-page-header.html'"></ng-include>
+    <ng-include src="'../app/templates/movies-list-viewer.html'"></ng-include>
+
+    <link href="../app/bower_components/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
+    <link href="../app/bower_components/bootstrap/dist/css/bootstrap-theme.css" rel="stylesheet">
+    <link href="../app/styling/movies.css" rel="stylesheet">
+
+    <script src="../app/bower_components/jquery/dist/jquery.js"></script>
+    <script src="../app/bower_components/bootstrap/dist/js/bootstrap.js"></script>
+
+    <script src="../app/bower_components/angular/angular.js"></script>
+    <script src="../app/bower_components/angular-resource/angular-resource.js"></script>
+
+    <script src="./_module/module.js"></script>
+    <script src="./configuration/config.js"></script>
+    <script src="./data/movies-list-fake-data.js"></script>
+    <script src="./services/movies-data-service.js"></script>
+    <script src="./controllers/movies-list-controller.js"></script>
+
+</body>
+</html>
